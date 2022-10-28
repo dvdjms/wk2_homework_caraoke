@@ -63,9 +63,17 @@ class TestRoom(unittest.TestCase):
         guest = Guest("Joshua", 45.00, "Jam")
         self.assertEqual("Boo!", self.room_3.guests_favourite_song(guest))
 
+    def test_guests_tab(self):
+        guest = Guest("Jane", 50.00, "Over the Rainbow")
+        drink = Bar("Beer", 4.50)
+        self.room_3.guests_tab(guest, drink)
+        self.assertEqual(20.50, guest.wallet)
+        self.assertEqual(29.50, self.room_3.tab)
+        self.assertEqual(5029.50, self.room_3.cash)
 
-# Guests can keep track of spending
-# self.drink_1 = Bar("Beer", 4.50)
+
+
+
 
 
 

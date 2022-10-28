@@ -49,6 +49,15 @@ class Room():
                 return "Whoo!"
         return "Boo!"
 
+    def guests_tab(self, guest, drink):
+        guest.wallet -= self.entry_fee + drink.price
+        self.tab += self.entry_fee + self.tab + drink.price
+        self.cash += self.tab
+    
+
+
+
+
 
 
  
