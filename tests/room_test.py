@@ -71,11 +71,12 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(29.50, self.room_3.tab)
         self.assertEqual(5029.50, self.room_3.cash)
 
-
-
-
-
-
+    # Function to select random song
+    def test_random_song(self):
+        for _ in range(100):
+            result = self.room_2.random_song()
+            self.assertTrue(0 <= result <= 6)
+            self.assertFalse(0 >= result >= 6)
 
 
 

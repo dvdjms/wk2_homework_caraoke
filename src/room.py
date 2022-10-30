@@ -1,3 +1,5 @@
+import random
+
 class Room():
 
     def __init__(self, name, tab, cash):
@@ -8,7 +10,7 @@ class Room():
         self.entry_fee = 25.00
         self.guests = ["guest1", "guest2"]
         self.songs = []
-        self.play_list = ["Bat Out of Hell", "Born to Run", "Over the Rainbow", "Jump", "Bat Out of Hell"]
+        self.play_list = ["Bat Out of Hell", "Born to Run", "Over the Rainbow", "Jump", "Bat Out of Hell", "Scream", "Black and White"]
 
     def count_guests(self):
         return len(self.guests)
@@ -54,6 +56,10 @@ class Room():
         self.tab += self.entry_fee + self.tab + drink.price
         self.cash += self.tab
     
+
+    def random_song(self):
+        random_song_number = random.randint(0, 6)
+        return random_song_number
 
 
 
